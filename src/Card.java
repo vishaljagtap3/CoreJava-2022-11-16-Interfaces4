@@ -1,4 +1,4 @@
-public class Card implements Loggable{
+public class Card implements Loggable, Printable {
 
     private long cardNo;
     private int bal;
@@ -6,6 +6,12 @@ public class Card implements Loggable{
     public Card(long cardNo, int bal) {
         this.cardNo = cardNo;
         this.bal = bal;
+    }
+
+    @Override
+    public void print() {
+        Printable.super.print();
+        System.out.println("Printing: " + toString());
     }
 
     @Override

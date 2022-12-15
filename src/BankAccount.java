@@ -1,4 +1,4 @@
-public abstract class BankAccount implements Loggable{
+public abstract class BankAccount implements Loggable, Printable {
     private int accNo;
     private String name;
     private int bal;
@@ -44,4 +44,10 @@ public abstract class BankAccount implements Loggable{
 
     public abstract boolean deposit(int amt);
     public abstract int withdraw(int amt);
+
+    @Override
+    public void print() {
+        Printable.super.print();
+        System.out.println("Printing: " + toString());
+    }
 }

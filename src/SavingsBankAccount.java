@@ -1,4 +1,4 @@
-public class SavingsBankAccount extends BankAccount{
+public class SavingsBankAccount extends BankAccount {
 
     private float interestRate;
 
@@ -35,5 +35,12 @@ public class SavingsBankAccount extends BankAccount{
     @Override
     public void info() {
         System.out.println("SBA info...");
+    }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.println("Printing: " + interestRate);
+        System.out.println("-----------------------------------");
     }
 }
